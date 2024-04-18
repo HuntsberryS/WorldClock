@@ -1,6 +1,7 @@
 body {
   background-color: #f9f7fe;
   font-family: sans-serif;
+  margin: 20px;
 }
 form {
   padding: 20px;
@@ -14,7 +15,7 @@ form {
 #container {
   text-align: center;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 60px auto;
   padding: 40px;
   background-color: white;
   border-radius: 7px;
@@ -23,21 +24,26 @@ form {
 #title {
   text-align: left;
 }
-#LA {
+.city {
   display: flex;
   justify-content: space-between;
   font-size: 40px;
+  padding: 20px;
 }
-#LATime {
-  font-size: 48px;
+.time {
+  font-size: 42px;
   font-weight: bold;
 }
+small {
+  font-size: 28px;
+}
 
-#LAWeather {
+.weather {
   text-align: left;
   opacity: 0.5;
+  border-bottom: 1px dashed black;
+  padding: 20px;
 }
 footer {
   text-align: center;
-  margin: 30px;
 }
