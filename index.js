@@ -1,11 +1,32 @@
-function displaycountrytime(event) {
-  if (event.target.value.length > 0) {
-    let time = moment()
-      .tz(event.target.value)
-      .format("[It is] dddd, MMMM D, YYYY hh:mm A");
-    alert(`${time} in ${event.target.value}`);
-  }
+function updateTime() {
+  let ParisElement = document.querySelector("#Paris");
+  let ParisDateDisplay = document.querySelector("#ParisDate");
+  let ParisTimeElement = document.querySelector("#ParisTime");
+  let ParisTimezone = moment().tz("Europe/Paris");
+  ParisDateDisplay.innerHTML = moment().format("dddd MMMM do, YYYY");
+  ParisTimeElement.innerHTML = ParisTimezone.format(
+    "hh:mm:ss [<small>] A [</small>]"
+  );
+
+  let TokyoElement = document.querySelector("#Tokyo");
+  let TokyoDateDisplay = document.querySelector("#TokyoDate");
+  let TokyoTimeElement = document.querySelector("#TokyoTime");
+  let TokyoTimezone = moment().tz("Asia/Tokyo");
+
+  TokyoDateDisplay.innerHTML = moment().format("dddd MMMM do, YYYY");
+  TokyoTimeElement.innerHTML = TokyoTimezone.format(
+    "hh:mm:ss [<small>]A[</small>]"
+  );
+
+  let SydneyElement = document.querySelector("#Sydney");
+  let SydneyDateDisplay = document.querySelector("#SydneyDate");
+  let SydneyTimeElement = document.querySelector("#SydneyTime");
+  let SydneyTimezone = moment().tz("Australia/Sydney");
+
+  SydneyDateDisplay.innerHTML = moment().format("dddd MMMM do, YYYY");
+  SydneyTimeElement.innerHTML = SydneyTimezone.format(
+    "hh:mm:ss [<small>]A[</small>]"
+  );
 }
 
-let selectedCountry = document.querySelector("#countries");
-selectedCountry.addEventListener("change", displaycountrytime);
+setInterval(updateTime, 1000);

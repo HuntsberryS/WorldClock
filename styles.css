@@ -34,11 +34,8 @@ form {
   font-size: 42px;
   font-weight: bold;
 }
-small {
-  font-size: 28px;
-}
 
-.weather {
+.date {
   text-align: left;
   opacity: 0.5;
   border-bottom: 1px dashed black;
@@ -46,4 +43,7 @@ small {
 }
 footer {
   text-align: center;
+}
+#small {
+  font-size: 28px;
 }
