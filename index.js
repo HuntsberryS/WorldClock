@@ -38,6 +38,9 @@ setInterval(updateTime, 1000);
 
 function updateCountryDisplay(event) {
   let adjustedTimeZone = event.target.value;
+  if (adjustedTimeZone === "current") {
+    adjustedTimeZone = moment.tz.guess();
+  }
   let cityName = adjustedTimeZone.split("/")[1].replace("_", " ");
   let countryTime = moment().tz(adjustedTimeZone);
 
@@ -53,6 +56,7 @@ function updateCountryDisplay(event) {
         </div>
         <div class="date">${countryTime.format("dddd MMMM do, YYYY")}
             </div>
+            <a href="/" id="homelink"> return to home </a> 
       </div>
   `;
 }

@@ -23,6 +23,7 @@ form {
 }
 #title {
   text-align: left;
+  font-size: 42px;
 }
 .city {
   display: flex;
@@ -46,4 +47,9 @@ footer {
 }
 #small {
   font-size: 28px;
+}
+#homelink {
+  display: flex;
+  justify-content: left;
+  margin-top: 30px;
 }
